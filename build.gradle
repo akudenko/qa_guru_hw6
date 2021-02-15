@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation (
+            "com.codeborne:selenide:5.17.3",
+            "org.junit.jupiter:junit-jupiter-api:5.7.0")
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.0"
+}
