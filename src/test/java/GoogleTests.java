@@ -12,4 +12,11 @@ public class GoogleTests {
     $("[name='q']").val("Selenide").pressEnter();
     $("#search").shouldHave(text("selenide.org"));
   }
+
+  @Test
+  public void shouldFindSelenideInYandex() {
+    open("https://yandex.ru/");
+    $("#text").val("Selenide").pressEnter();
+    $(".main__content").shouldHave(text("selenide.org"));
+  }
 }
